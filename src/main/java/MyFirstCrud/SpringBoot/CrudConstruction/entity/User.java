@@ -9,13 +9,13 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-//Entidad User cn todos los atributos que se guardan en la base de datos
+//Entidad (Objeto) User con todos los atributos que se guardan en la base de datos
 @Entity
 @Table(name = "users")
 public class User {
-    @Id
+    @Id//Se autogenerará para cada usuer
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id_user", nullable = false, unique = true)
+    @Column(name = "id_user", nullable = false, unique = true)//Se le dan especificaciones
     private Long id;
     @Column(length = 50)
     private String name;
@@ -30,6 +30,7 @@ public class User {
     public User() {
     }
 
+    //Constructor objeto user
     public User(String name, String email, LocalDate birthDate) {
         this.name = name;
         this.email = email;
@@ -81,5 +82,4 @@ public class User {
                 ", birthDate=" + birthDate +
                 '}';
     }
-
 }

@@ -32,6 +32,7 @@ public class GeneralConfiguration {
     private String password;
 
 
+    //Bean para establecer la configuración y creación de la base de datos
     @Bean
     public DataSource dataSource() {
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();

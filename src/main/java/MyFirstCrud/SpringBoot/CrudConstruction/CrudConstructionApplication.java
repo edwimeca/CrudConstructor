@@ -5,7 +5,6 @@ import MyFirstCrud.SpringBoot.CrudConstruction.entity.User;
 import MyFirstCrud.SpringBoot.CrudConstruction.pojo.properties.UserProperties;
 import MyFirstCrud.SpringBoot.CrudConstruction.repository.PostRepository;
 import MyFirstCrud.SpringBoot.CrudConstruction.repository.UserRepository;
-import MyFirstCrud.SpringBoot.CrudConstruction.services.UserService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -24,13 +23,13 @@ public class CrudConstructionApplication implements CommandLineRunner {
 	private UserRepository userRepository;
 	private UserProperties userProperties;
 	private PostRepository postRepository;
-	private UserService userService;
 
-	public CrudConstructionApplication(UserRepository userRepository, UserProperties userProperties, PostRepository postRepository, UserService userService) {
+
+	public CrudConstructionApplication(UserRepository userRepository, UserProperties userProperties, PostRepository postRepository) {
 		this.userRepository = userRepository;
 		this.userProperties = userProperties;
 		this.postRepository = postRepository;
-		this.userService = userService;
+
 	}
 
 	public static void main(String[] args) {

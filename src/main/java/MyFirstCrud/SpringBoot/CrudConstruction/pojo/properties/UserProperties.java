@@ -6,6 +6,8 @@ import org.springframework.boot.context.properties.ConstructorBinding;
 @ConstructorBinding
 @ConfigurationProperties(prefix = "user")
 public class UserProperties {
+
+
     private String email;
     private String password;
     private int age;

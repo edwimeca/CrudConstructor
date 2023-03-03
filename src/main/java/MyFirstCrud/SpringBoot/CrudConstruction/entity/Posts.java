@@ -2,10 +2,10 @@ package MyFirstCrud.SpringBoot.CrudConstruction.entity;
 
 import javax.persistence.*;
 
+//Capa para usar organizar la base de datos y poderla enviara  la api de manera organizada
 @Entity
 @Table(name = "post")
 public class Posts {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //identity para que no se siga el contador de otros registros
     @Column(name = "id_post", nullable = false, unique = true)
@@ -60,5 +60,4 @@ public class Posts {
                 ", description='" + description + '\'' +
                 '}';
     }
-
 }
